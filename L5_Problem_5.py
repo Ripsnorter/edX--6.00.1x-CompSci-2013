@@ -23,21 +23,16 @@ Write a function gcdRecur(a, b) that implements this idea recursively. This func
 '''
 
 
-def gcdRecur(a, b):
+def lenIter(aStr):
     '''
-    a, b: positive integers
+    aStr: a string
     
-    returns: a positive integer, the greatest common divisor of a & b.
+    returns: int, the length of aStr
     '''
-    # Your code here
-    if b == 0:
-        return a
-    else:
-        return gcdRecur(b, a%b)
+    # Initialize a variable to hold our final count
+    count = 0
 
-
-#Test Code
-
-gcdRecur(88, 96)
-
-gcdRecur(143, 78)
+    # Iterate over each character in the string, counting each one
+    for char in aStr:
+        count += 1
+    return count
