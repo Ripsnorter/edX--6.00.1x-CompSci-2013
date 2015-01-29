@@ -8,19 +8,16 @@ Hint: String slicing may be useful in this problem...
 '''
 
 def lenRecur(aStr):
-    s = aStr
-    sLen = 0
+    '''
+    aStr: a string
     
-    if s == '':
+    returns: int, the length of aStr
+    '''
+    # Base case: When aStr is the empty string,
+    #  its length is zero.
+    if aStr == '':
         return 0
-    else:
-        return 1 + lenRecur(s[0:-1]) #returns 1 + the amount of times this damn thing loops
 
-
-#Test Code
-
-lenRecur('')
-
-lenRecur('siomweyqiypyryxnbqy')
-
-Test: lenRecur('jxo')
+    # Recursive case: If the string is not zero-length, then remove the first
+    #  character and the length is 1 + the length of the rest of the string
+    return 1 + lenRecur(aStr[1:])
